@@ -40,3 +40,17 @@ const studentsWithAverage = students.map((student) => ({
 studentsWithAverage.forEach((student) => {
   console.log(`${student.name}: ${student.average.toFixed(2)}`);
 });
+
+// --- Task 9 ---
+const updatedStudents = students.map((student) => {
+  if (student.name === "Emir") {
+    return { ...student, year: 3 };
+  }
+  return student;
+});
+
+const originalEmir = students.find((s) => s.name === "Emir");
+const updatedEmir = updatedStudents.find((s) => s.name === "Emir");
+
+console.log(`Original: Emir is in year ${originalEmir.year}`);
+console.log(`Updated: Emir is in year ${updatedEmir.year}`);
