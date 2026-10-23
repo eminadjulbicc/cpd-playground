@@ -1,1 +1,2 @@
-export { default } from '../lab3/Timer';
+import { StyleSheet } from 'react-native';
+
